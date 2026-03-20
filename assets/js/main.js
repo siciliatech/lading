@@ -1,63 +1,22 @@
-// SiCiLIA — interacción básica
-(function(){
-  const menuBtn = document.querySelector('.nav__toggle');
-  const menu = document.querySelector('.nav__menu');
-  const themeBtn = document.getElementById('themeToggle');
-  const year = document.getElementById('year');
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Seleccionamos el menú de navegación (Header)
+    const navbar = document.querySelector('.navbar');
 
-  // Año actual en footer
-  if(year) year.textContent = new Date().getFullYear();
-
-  // Menú móvil
-  if(menuBtn && menu){
-    menuBtn.addEventListener('click', () => {
-      const open = menu.style.display === 'flex';
-      menu.style.display = open ? 'none' : 'flex';
-      menuBtn.setAttribute('aria-expanded', String(!open));
+    // 2. Escuchamos el evento de scroll en la ventana
+    window.addEventListener('scroll', () => {
+        // Si el usuario bajó más de 20 píxeles...
+        if (window.scrollY > 20) {
+            // Hacemos el menú un poco más delgado y le damos una sombra corporativa sutil
+            navbar.style.padding = '10px 0';
+            navbar.style.boxShadow = '0 4px 6px -1px rgba(0,0,0,0.1)';
+            navbar.style.transition = 'all 0.3s ease';
+        } else {
+            // Volvemos al estado original (sombra súper ligera del nuevo CSS)
+            navbar.style.padding = '15px 0';
+            navbar.style.boxShadow = '0 1px 3px rgba(0,0,0,0.05)';
+        }
     });
-    // Cerrar menú al navegar
-    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      if(window.innerWidth <= 640){ menu.style.display = 'none'; menuBtn.setAttribute('aria-expanded','false'); }
-    }))
-  }
 
-  // Tema oscuro/claro
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const saved = localStorage.getItem('sicilia-theme');
-  function setTheme(mode){
-    if(mode === 'light'){
-      document.documentElement.style.setProperty('--text', '#0b0f14');
-      document.documentElement.style.setProperty('--muted', '#4a5561');
-      document.documentElement.style.setProperty('--card', '#ffffff');
-      document.documentElement.style.setProperty('--border', '#e5e7eb');
-    } else {
-      document.documentElement.style.removeProperty('--bg');
-      document.documentElement.style.removeProperty('--bg-alt');
-      document.documentElement.style.removeProperty('--text');
-      document.documentElement.style.removeProperty('--muted');
-      document.documentElement.style.removeProperty('--card');
-      document.documentElement.style.removeProperty('--border');
-    }
-    localStorage.setItem('sicilia-theme', mode);
-  }
-  let mode = saved || (prefersDark ? 'dark' : 'light');
-  setTheme(mode);
-  if(themeBtn){
-    themeBtn.addEventListener('click', () => {
-      mode = mode === 'dark' ? 'light' : 'dark';
-      setTheme(mode);
-    })
-  }
-
-  // Smooth scroll
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', (e) => {
-      const id = a.getAttribute('href');
-      if(!id || id === '#') return;
-      const el = document.querySelector(id);
-      if(!el) return;
-      e.preventDefault();
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  });
-})();
+    // 3. Mensaje de confirmación en consola para verificar que el JS cargó bien
+    console.log("🚀 Arquitectura de Sicilia Labs inicializada correctamente.");
+});
