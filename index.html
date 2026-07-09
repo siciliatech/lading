@@ -1,98 +1,606 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-MX">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sicilia Labs - Consultora en Inteligencia Artificial aplicada. Orquestación de agentes y arquitectura RAG para educación, comercio minorista y desarrollo de software.">
-    <title>Sicilia Labs | Inteligencia Artificial Aplicada</title>
-    
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sicilia Labs</title>
+  <meta name="description" content="Sicilia Labs — Ingeniería y arquitectura en inteligencia artificial. Soluciones RAG para educación, automatización comercial y capacitación en IA para empresas.">
+  <link rel="canonical" href="https://sicilialabs.tech/">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sicilia Labs — Ingeniería y Arquitectura en IA">
+  <meta property="og:description" content="Soluciones RAG para educación, automatización comercial con WhatsApp Business API y capacitación in-company en IA.">
+  <meta property="og:url" content="https://sicilialabs.tech/">
+  <meta property="og:site_name" content="Sicilia Labs">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sicilia Labs — Ingeniería y Arquitectura en IA">
+  <meta name="twitter:description" content="Soluciones RAG para educación, automatización comercial con WhatsApp Business API y capacitación in-company en IA.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Sicilia Labs",
+    "url": "https://sicilialabs.tech/",
+    "email": "gussiciliano@gmail.com",
+    "description": "Ingeniería y arquitectura en inteligencia artificial. Soluciones RAG, automatización comercial y capacitación en IA."
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="container">
-            <div class="logo">
-                <img src="assets/img/full-logo.png" alt="Logo de Sicilia Labs">
+  <a href="#main-content" class="sr-only" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">Saltar al contenido principal</a>
+
+  <!-- Nav -->
+  <nav class="nav" aria-label="Navegación principal">
+    <div class="nav-inner">
+      <button class="nav-logo" data-page="home" aria-label="Ir al inicio">
+        <img src="assets/img/full-logo.png" alt="Sicilia Labs" width="180" height="55">
+      </button>
+
+      <div class="nav-links">
+        <button data-page="empresa">Empresa</button>
+        <button data-section="soluciones">Servicios</button>
+        <button data-section="metodologia">Metodología</button>
+        <button data-section="casos-de-exito">Casos de Éxito</button>
+        <button data-section="contacto">Contacto</button>
+      </div>
+
+      <a href="mailto:gussiciliano@gmail.com" class="nav-cta">Charlemos</a>
+
+      <button class="nav-hamburger" aria-label="Abrir menú de navegación" aria-expanded="false">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7"></line>
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="17" x2="20" y2="17"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="nav-mobile" role="menu">
+      <button data-page="empresa" role="menuitem">Empresa</button>
+      <button data-section="soluciones" role="menuitem">Servicios</button>
+      <button data-section="metodologia" role="menuitem">Metodología</button>
+      <button data-section="casos-de-exito" role="menuitem">Casos de Éxito</button>
+      <button data-section="contacto" role="menuitem">Contacto</button>
+      <a href="mailto:gussiciliano@gmail.com" class="nav-cta">Charlemos</a>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ────── HOME ────── -->
+    <div id="page-home" class="page-home">
+
+      <!-- Hero -->
+      <section class="hero" aria-label="Hero">
+        <div class="hero-inner">
+          <div class="hero-grid">
+            <div>
+              <div class="hero-badge" role="status">
+                <span class="hero-badge-dot" aria-hidden="true"></span>
+                <span class="hero-badge-text">Ingeniería y Arquitectura en IA</span>
+              </div>
+              <h1>Ingeniería y Arquitectura en <span>Inteligencia Artificial</span></h1>
+              <p>Automatización precisa para educación, comercio y desarrollo de software. IA aplicada sin hype, con resultados medibles.</p>
+              <div class="hero-actions">
+                <a href="mailto:gussiciliano@gmail.com" class="btn-primary">
+                  Charlemos
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <button class="btn-secondary" data-section="soluciones">Nuestros Servicios</button>
+              </div>
+              <div class="hero-pillars">
+                <div class="hero-pillar">
+                  <span class="hero-pillar-dot" aria-hidden="true"></span>
+                  <span>Educación</span>
+                </div>
+                <div class="hero-pillar">
+                  <span class="hero-pillar-dot" aria-hidden="true"></span>
+                  <span>Comercio</span>
+                </div>
+                <div class="hero-pillar">
+                  <span class="hero-pillar-dot" aria-hidden="true"></span>
+                  <span>Desarrollo de Software</span>
+                </div>
+              </div>
             </div>
-            <nav>
+            <div class="hero-visual" aria-hidden="true">
+              <svg class="neural-svg" viewBox="0 0 460 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="230" cy="200" r="156" stroke="rgba(59,130,196,0.15)" stroke-width="1"/>
+                <circle cx="230" cy="200" r="106" stroke="rgba(59,130,196,0.15)" stroke-width="1"/>
+                <circle cx="230" cy="200" r="56" stroke="rgba(59,130,196,0.15)" stroke-width="1"/>
+                <circle cx="230" cy="200" r="14" fill="#3B82C4" opacity="0.4"/>
+                <circle cx="230" cy="44" r="8" fill="#4A9B5E" opacity="0.6"/>
+                <circle cx="356" cy="200" r="8" fill="#3B82C4" opacity="0.6"/>
+                <circle cx="104" cy="200" r="8" fill="#4A9B5E" opacity="0.6"/>
+                <circle cx="230" cy="356" r="8" fill="#3B82C4" opacity="0.6"/>
+                <circle cx="328" cy="96" r="6" fill="#4A9B5E" opacity="0.5"/>
+                <circle cx="328" cy="304" r="6" fill="#3B82C4" opacity="0.5"/>
+                <circle cx="132" cy="96" r="6" fill="#4A9B5E" opacity="0.5"/>
+                <circle cx="132" cy="304" r="6" fill="#3B82C4" opacity="0.5"/>
+                <line x1="230" y1="44" x2="230" y2="186" stroke="rgba(59,130,196,0.25)" stroke-width="1"/>
+                <line x1="356" y1="200" x2="244" y2="200" stroke="rgba(74,155,94,0.25)" stroke-width="1"/>
+                <line x1="104" y1="200" x2="216" y2="200" stroke="rgba(74,155,94,0.25)" stroke-width="1"/>
+                <line x1="230" y1="356" x2="230" y2="214" stroke="rgba(59,130,196,0.25)" stroke-width="1"/>
+                <line x1="328" y1="96" x2="244" y2="186" stroke="rgba(59,130,196,0.15)" stroke-width="1"/>
+                <line x1="328" y1="304" x2="244" y2="214" stroke="rgba(59,130,196,0.15)" stroke-width="1"/>
+                <line x1="132" y1="96" x2="216" y2="186" stroke="rgba(59,130,196,0.15)" stroke-width="1"/>
+                <line x1="132" y1="304" x2="216" y2="214" stroke="rgba(59,130,196,0.15)" stroke-width="1"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Clients -->
+      <section class="clients" aria-label="Clientes">
+        <p class="clients-label">Confían en nosotros</p>
+        <div class="clients-list">
+          <span class="client-item">UNLa</span>
+          <span class="client-item">B2BLatam</span>
+          <span class="client-item">Universidad de Alicante</span>
+        </div>
+      </section>
+
+      <!-- Solutions -->
+      <section class="section" id="soluciones" aria-labelledby="solutions-title">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-title">Soluciones</p>
+            <h2 class="section-heading" id="solutions-title">Soluciones Tecnológicas</h2>
+            <p class="section-sub">Arquitecturas diseñadas para resolver desafíos reales de educación, comercio y desarrollo de software.</p>
+          </div>
+        </div>
+        <div class="solutions-grid">
+          <article class="solution-card">
+            <div class="solution-card-header">
+              <div class="solution-icon" style="background:rgba(27,58,92,0.1);color:var(--dark);">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              </div>
+              <span class="solution-tag" style="background:var(--dark);color:var(--white);">Sector Académico</span>
+            </div>
+            <h3>CogniBookIA</h3>
+            <p class="solution-desc">Chatbot con arquitectura RAG alimentado por la bibliografía oficial de cada cátedra. Precisión académica garantizada.</p>
+          </article>
+
+          <article class="solution-card">
+            <div class="solution-card-header">
+              <div class="solution-icon" style="background:rgba(74,155,94,0.12);color:var(--green);">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M6 6h.01M6 10h.01M6 14h.01M6 18h.01"/></svg>
+              </div>
+              <span class="solution-tag" style="background:var(--green);color:var(--white);">Sector Comercial</span>
+            </div>
+            <h3>PyME-Assist</h3>
+            <p class="solution-desc">Automatización de atención al cliente vía WhatsApp Business API con módulo transaccional y RAG para FAQ.</p>
+          </article>
+
+          <article class="solution-card">
+            <div class="solution-card-header">
+              <div class="solution-icon" style="background:rgba(59,130,196,0.12);color:var(--light);">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <span class="solution-tag" style="background:var(--light);color:var(--white);">Software Factories</span>
+            </div>
+            <h3>Ingeniería Aumentada</h3>
+            <p class="solution-desc">Capacitación in-company para transformar desarrolladores en orquestadores de agentes autónomos.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Methodology -->
+      <section class="section bg-gray" id="metodologia" aria-labelledby="method-title">
+        <div class="container">
+          <div class="section-header center">
+            <p class="section-title">Metodología</p>
+            <h2 class="section-heading" id="method-title">Cómo trabajamos</h2>
+            <p class="section-sub" style="margin-left:auto;margin-right:auto;">Un proceso iterativo, ágil y centrado en resultados que garantiza la entrega de valor en cada etapa.</p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="methodology-grid">
+            <div class="method-step">
+              <div class="method-step-top">
+                <span class="method-step-num">01</span>
+              </div>
+              <h3>Diagnóstico</h3>
+              <p>Analizamos tu situación actual, identificamos oportunidades y definimos KPIs de éxito.</p>
+            </div>
+            <div class="method-step">
+              <div class="method-step-top">
+                <span class="method-step-num">02</span>
+              </div>
+              <h3>Estrategia</h3>
+              <p>Diseñamos una hoja de ruta personalizada alineada a tus objetivos de negocio.</p>
+            </div>
+            <div class="method-step">
+              <div class="method-step-top">
+                <span class="method-step-num">03</span>
+              </div>
+              <h3>Implementación</h3>
+              <p>Ejecutamos con equipos multidisciplinarios, metodologías ágiles y entregas iterativas.</p>
+            </div>
+            <div class="method-step">
+              <div class="method-step-top">
+                <span class="method-step-num">04</span>
+              </div>
+              <h3>Optimización</h3>
+              <p>Medimos, aprendemos y escalamos. Mejora continua basada en datos reales.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Metrics -->
+      <section class="section bg-dark" aria-labelledby="metrics-title">
+        <div class="container">
+          <div class="metrics-header">
+            <p class="section-title" style="color:rgba(59,130,196,0.6);">Áreas de impacto</p>
+            <h2 class="section-heading" id="metrics-title" style="color:#fff;">Cómo generamos valor</h2>
+          </div>
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <div class="metric-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4A9B5E" stroke-width="1.5" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <p class="metric-label">Soluciones Implementadas</p>
+              <p class="metric-desc">Arquitecturas RAG, automatización comercial y capacitación en IA entregadas a organizaciones de educación y comercio.</p>
+            </div>
+            <div class="metric-card">
+              <div class="metric-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4A9B5E" stroke-width="1.5" stroke-linecap="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <p class="metric-label">Automatización con IA</p>
+              <p class="metric-desc">Orquestación de agentes autónomos y procesamiento de lenguaje natural para optimizar procesos complejos.</p>
+            </div>
+            <div class="metric-card">
+              <div class="metric-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4A9B5E" stroke-width="1.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <p class="metric-label">Capacitación Empresarial</p>
+              <p class="metric-desc">Programas intensivos diseñados para que cada hora invertida se traduzca en minutos ahorrados en el día a día.</p>
+            </div>
+            <div class="metric-card">
+              <div class="metric-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4A9B5E" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+              <p class="metric-label">Consultoría Tecnológica</p>
+              <p class="metric-desc">Acompañamiento estratégico para que la adopción de IA sea sostenible y potencie el impacto del negocio.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tech Stack -->
+      <section class="section" aria-labelledby="tech-title">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-title">Tecnología</p>
+            <h2 class="section-heading" id="tech-title">Nuestro stack tecnológico</h2>
+            <p class="section-sub">Herramientas modernas y escalables para cada desafío.</p>
+          </div>
+          <div class="tech-grid">
+            <div class="tech-item"><img src="assets/img/tech/python.svg" alt="" width="20" height="20"><span>Python</span></div>
+            <div class="tech-item"><img src="assets/img/tech/fastapi.svg" alt="" width="20" height="20"><span>FastAPI</span></div>
+            <div class="tech-item"><img src="assets/img/tech/nodedotjs.svg" alt="" width="20" height="20"><span>Node.js</span></div>
+            <div class="tech-item"><img src="assets/img/tech/typescript.svg" alt="" width="20" height="20"><span>TypeScript</span></div>
+            <div class="tech-item"><img src="assets/img/tech/express.svg" alt="" width="20" height="20"><span>Express 5</span></div>
+            <div class="tech-item"><img src="assets/img/tech/postgresql.svg" alt="" width="20" height="20"><span>PostgreSQL 16</span></div>
+            <div class="tech-item"><img src="assets/img/tech/redis.svg" alt="" width="20" height="20"><span>Redis 7</span></div>
+            <div class="tech-item"><img src="assets/img/tech/chromadb.svg" alt="" width="20" height="20"><span>ChromaDB</span></div>
+            <div class="tech-item"><img src="assets/img/tech/prisma.svg" alt="" width="20" height="20"><span>Prisma 7</span></div>
+            <div class="tech-item"><img src="assets/img/tech/langchain.svg" alt="" width="20" height="20"><span>LangChain</span></div>
+            <div class="tech-item"><img src="assets/img/tech/langgraph.svg" alt="" width="20" height="20"><span>LangGraph</span></div>
+            <div class="tech-item"><img src="assets/img/tech/groq.svg" alt="" width="20" height="20"><span>Groq</span></div>
+            <div class="tech-item"><img src="assets/img/tech/huggingface.svg" alt="" width="20" height="20"><span>HuggingFace</span></div>
+            <div class="tech-item"><img src="assets/img/tech/pytorch.svg" alt="" width="20" height="20"><span>PyTorch</span></div>
+            <div class="tech-item"><img src="assets/img/tech/nextdotjs.svg" alt="" width="20" height="20"><span>Next.js 16</span></div>
+            <div class="tech-item"><img src="assets/img/tech/react.svg" alt="" width="20" height="20"><span>React 19</span></div>
+            <div class="tech-item"><img src="assets/img/tech/tailwindcss.svg" alt="" width="20" height="20"><span>Tailwind CSS 4</span></div>
+            <div class="tech-item"><img src="assets/img/tech/zustand.svg" alt="" width="20" height="20"><span>Zustand 5</span></div>
+            <div class="tech-item"><img src="assets/img/tech/docker.svg" alt="" width="20" height="20"><span>Docker</span></div>
+            <div class="tech-item"><img src="assets/img/tech/nginx.svg" alt="" width="20" height="20"><span>nginx</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Awards -->
+      <section class="section bg-gray" aria-labelledby="awards-title">
+        <div class="container">
+          <div class="section-header center">
+            <p class="section-title">Reconocimientos</p>
+            <h2 class="section-heading" id="awards-title">Premios y certificaciones</h2>
+          </div>
+          <div class="awards-placeholder" role="status">
+            <p style="font-family:var(--font-body);font-size:14px;color:var(--muted);margin:0;">Próximamente</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Casos de Éxito -->
+      <section class="section" id="casos-de-exito" aria-labelledby="casos-title">
+        <div class="container">
+          <div class="section-header center">
+            <p class="section-title">Casos de Éxito</p>
+            <h2 class="section-heading" id="casos-title">Resultados que transforman</h2>
+            <p class="section-sub" style="margin-left:auto;margin-right:auto;">Historias reales de organizaciones que potenciaron su negocio con datos e inteligencia artificial.</p>
+          </div>
+          <div class="casos-grid">
+            <article class="caso-card">
+              <div class="caso-tags">
+                <span class="caso-tag" style="background:rgba(74,155,94,0.12);color:var(--green);border:1px solid rgba(74,155,94,0.25);">Capacitación</span>
+                <span class="caso-tag" style="background:rgba(59,130,196,0.12);color:var(--light);border:1px solid rgba(59,130,196,0.25);">IA Aplicada</span>
+              </div>
+              <h3>De la teoría a la automatización real</h3>
+              <p class="caso-client"><strong>B2BLatam</strong></p>
+              <div class="caso-body-short">
                 <ul>
-                    <li><a href="#nosotros">La Firma</a></li>
-                    <li><a href="#soluciones">Soluciones IA</a></li>
-                    <li><a href="#capacitacion">Capacitación</a></li>
-                    <li><a href="#contacto" class="btn-primary">Agendar Reunión</a></li>
+                  <li>Programa intensivo de capacitación en IA con enfoque práctico</li>
+                  <li>Prompting estratégico, Microsoft Copilot y herramientas 2026</li>
+                  <li>Participantes detectaron oportunidades de automatización en tiempo real</li>
                 </ul>
-            </nav>
-        </div>
-    </header>
+              </div>
+              <div class="caso-body-full">
+                <p>Junto al equipo de B2BLatam, finalizamos un programa intensivo de capacitación en IA diseñado con un único norte: que cada hora invertida se traduzca en minutos ahorrados en el día a día.</p>
+                <p>Durante tres encuentros prácticos, fuimos mucho más allá de los conceptos teóricos. Nos metimos de lleno en <strong>prompting estratégico y fundamentos sólidos</strong>, el ecosistema de herramientas clave para este 2026 y <strong>Microsoft Copilot</strong> aplicado a escenarios reales de negocio.</p>
+                <p>Lo más valioso fue ver a los participantes detectar, en tiempo real, oportunidades concretas para optimizar procesos complejos y automatizar tareas repetitivas. El éxito de una capacitación no se mide en horas dictadas, sino en los cambios que el equipo implementa desde el día uno.</p>
+                <p>Un agradecimiento enorme a <strong>Florencia Bernini</strong> y <strong>Daniel Segovia</strong> por confiar en nosotros para este proceso, y a todo el equipo de B2BLatam por la energía y el nivel de participación.</p>
+              </div>
+              <button class="caso-toggle">Ver más</button>
+            </article>
 
-    <section class="hero">
+            <article class="caso-card">
+              <div class="caso-tags">
+                <span class="caso-tag" style="background:rgba(27,58,92,0.1);color:var(--dark);border:1px solid rgba(27,58,92,0.2);">Educación</span>
+                <span class="caso-tag" style="background:rgba(59,130,196,0.12);color:var(--light);border:1px solid rgba(59,130,196,0.25);">RAG</span>
+                <span class="caso-tag" style="background:rgba(74,155,94,0.12);color:var(--green);border:1px solid rgba(74,155,94,0.25);">IA Soberana</span>
+              </div>
+              <h3>IA soberana para la educación universitaria</h3>
+              <p class="caso-client"><strong>UNLa — Universidad Nacional de Lanús</strong></p>
+              <div class="caso-body-short">
+                <ul>
+                  <li>Proyecto con RAG AI para plataforma educativa universitaria</li>
+                  <li>Presentado en el Congreso Internacional de Educación y Conocimiento (Alicante, España)</li>
+                  <li>Cooperación con universidades de España, México, Uruguay, Italia y Costa Rica</li>
+                </ul>
+              </div>
+              <div class="caso-body-full">
+                <p>La UNLa estuvo presente en el <strong>Congreso Internacional de Educación y Conocimiento</strong> en la Universidad de Alicante, España, presentando un proyecto de investigación y desarrollo que utiliza <strong>RAG AI</strong> para generar una plataforma educativa de IA soberana.</p>
+                <p>El proyecto se llama <strong>Cognibookia</strong> y ya está en etapa de testeo en ambiente real. Este desarrollo se confeccionó en el marco de Sicilia Labs Tech con el apoyo del Departamento de Desarrollo Productivo y Tecnológico en UNLa.</p>
+                <p>Confiamos en que la cooperación en la investigación y desarrollo por parte de docentes, estudiantes y universidades es fundamental para el crecimiento y generación de conocimiento.</p>
+              </div>
+              <button class="caso-toggle">Ver más</button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team -->
+      <section class="section bg-gray" aria-labelledby="team-title">
         <div class="container">
-            <h1>Ingeniería y Arquitectura en Inteligencia Artificial</h1>
-            <p>Democratizamos el acceso a la IA aplicada mediante herramientas de automatización precisas. Transformamos la educación, el comercio y el desarrollo de software con orquestación de agentes autónomos.</p>
-            <a href="#soluciones" class="btn-secondary">Explorar Arquitecturas</a>
+          <div class="section-header">
+            <p class="section-title">Equipo</p>
+            <h2 class="section-heading" id="team-title">Conoce a los fundadores</h2>
+            <p class="section-sub">Profesionales apasionados por la tecnología y los resultados.</p>
+          </div>
+          <div class="team-grid">
+            <article class="team-card">
+              <div class="team-avatar" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <h3>Gustavo Siciliano</h3>
+              <p class="team-role">Fundador &amp; CEO</p>
+              <p class="team-bio">Ingeniero de software con 15+ años de experiencia liderando equipos de datos e IA en startups y corporaciones multinacionales. Apasionado por transformar organizaciones a través de la tecnología.</p>
+              <a href="mailto:gussiciliano@gmail.com" class="team-link">
+                <span>gussiciliano@gmail.com</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </article>
+            <div class="team-placeholder" role="status">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+              <p style="font-family:var(--font-heading);font-weight:600;font-size:15px;color:var(--muted);margin:16px 0 0;">Próximamente</p>
+              <p style="font-family:var(--font-body);font-size:13px;color:var(--muted);margin:8px 0 0;">Estamos armando el equipo ideal</p>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section id="nosotros" class="about">
+      <!-- Final CTA -->
+      <section class="final-cta" id="contacto" aria-labelledby="cta-title">
+        <div class="final-cta-inner">
+          <p>¿Listo para transformar tu negocio?</p>
+          <h2 id="cta-title">Hablemos de tu próximo proyecto</h2>
+          <div class="cta-actions">
+            <a href="mailto:gussiciliano@gmail.com" class="btn-primary">
+              Charlemos
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <button class="btn-outline" data-page="empresa">
+              Conoce más
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+    <!-- ────── END HOME ────── -->
+
+    <!-- ────── EMPRESA ────── -->
+    <div id="page-empresa" class="page-empresa">
+
+      <!-- Empresa Hero -->
+      <section class="empresa-hero" aria-labelledby="empresa-title">
+        <div class="empresa-hero-inner">
+          <button class="empresa-back" data-page="home">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            Volver al inicio
+          </button>
+          <h1 id="empresa-title">Sobre Sicilia Labs</h1>
+          <p>Automatización precisa para educación y retail. Semillero de talento en IA.</p>
+        </div>
+      </section>
+
+      <!-- Misión y Visión -->
+      <section class="section" aria-labelledby="mv-title">
         <div class="container">
-            <h2>Nuestra Visión Estratégica</h2>
-            <div class="grid-2-cols">
-                <div class="card">
-                    <h3>Misión</h3>
-                    <p>Brindar herramientas de automatización precisas para la educación y el retail, operando simultáneamente como un semillero de talento para desarrolladores Junior de alto rendimiento.</p>
-                </div>
-                <div class="card">
-                    <h3>Visión</h3>
-                    <p>Consolidarnos como el partner tecnológico referente en Argentina para instituciones y PyMEs que buscan escalar operativamente sin comprometer la calidad humana y la precisión.</p>
-                </div>
+          <div class="section-header center">
+            <p class="section-title">Propósito</p>
+            <h2 class="section-heading" id="mv-title">Nuestra razón de ser</h2>
+          </div>
+          <div class="mv-grid">
+            <div>
+              <p class="mv-label mission">Misión</p>
+              <h2>Automatización precisa para educación y retail</h2>
+              <p>Para educación y retail, formando talento Junior de alto rendimiento.</p>
             </div>
+            <div>
+              <p class="mv-label vision">Visión</p>
+              <h2>Ser el partner tecnológico referente en Argentina</h2>
+              <p>Para instituciones y PyMEs que buscan escalar sin comprometer calidad humana ni precisión.</p>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section id="soluciones" class="products bg-light">
+      <!-- Pilares -->
+      <section class="section bg-gray" aria-labelledby="pilares-title">
         <div class="container">
-            <h2>Soluciones Tecnológicas</h2>
-            <div class="grid-3-cols">
-                
-                <div class="product-card">
-                    <div class="tag">Sector Académico</div>
-                    <h3>CogniBookIA</h3>
-                    <p><strong>El Desafío:</strong> Modelos fundacionales que generan alucinaciones o desvían la bibliografía oficial de la cátedra.</p>
-                    <p><strong>Nuestra Arquitectura:</strong> Despliegue de Chatbots con arquitectura RAG (Retrieval-Augmented Generation) aislada y alimentada exclusivamente por la base de datos oficial del docente. Precisión académica garantizada.</p>
-                </div>
-
-                <div class="product-card">
-                    <div class="tag">Sector Comercial</div>
-                    <h3>PyME-Assist</h3>
-                    <p><strong>El Desafío:</strong> Cuellos de botella operativos en la atención vía WhatsApp que resultan en pérdida de conversiones.</p>
-                    <p><strong>Nuestra Arquitectura:</strong> Integración avanzada con WhatsApp Business API. Implementamos un módulo transaccional directo a base de datos, RAG para FAQ y análisis de enlaces sociales para asesoramiento automatizado.</p>
-                </div>
-
-                <div class="product-card">
-                    <div class="tag">Software Factories</div>
-                    <h3>Ingeniería Aumentada</h3>
-                    <p><strong>El Desafío:</strong> El mercado actual exige transicionar del desarrollo tradicional a la orquestación de IA.</p>
-                    <p><strong>Nuestra Arquitectura:</strong> Programas de capacitación in-company para transformar desarrolladores en orquestadores de agentes autónomos, eliminando el tiempo en tareas repetitivas (boilerplate, tests) para enfocarlo en la estrategia.</p>
-                </div>
-
-            </div>
+          <div class="section-header center">
+            <p class="section-title">Pilares</p>
+            <h2 class="section-heading" id="pilares-title">Nuestra base</h2>
+          </div>
         </div>
-    </section>
-
-    <footer id="contacto" class="footer">
-        <div class="container text-center">
-            <h2>Escale sus operaciones con Sicilia Labs</h2>
-            <p>Contáctenos para evaluar la viabilidad técnica de implementar IA en sus procesos.</p>
-            <a href="mailto:gussiciliano@gmail.com" class="btn-primary">gussiciliano@gmail.com</a>
-            <div class="social-links mt-4">
-                <a href="https://www.linkedin.com/in/gustavo-hernan-siciliano/">Conectemos en LinkedIn</a>
-            </div>
-            <p class="copyright mt-4">&copy; 2026 Sicilia Labs. Todos los derechos reservados.</p>
+        <div class="pilares-grid">
+          <article class="pilar-card">
+            <span class="pilar-num" style="color:var(--green);">Pilar 01</span>
+            <h3>Automatización precisa</h3>
+            <p>Cada solución elimina tareas repetitivas sin sacrificar calidad.</p>
+          </article>
+          <article class="pilar-card">
+            <span class="pilar-num" style="color:var(--light);">Pilar 02</span>
+            <h3>Formación de talento</h3>
+            <p>Semillero de devs Junior de alto rendimiento con experiencia real en proyectos.</p>
+          </article>
+          <article class="pilar-card">
+            <span class="pilar-num" style="color:var(--green);">Pilar 03</span>
+            <h3>Calidad humana y técnica</h3>
+            <p>Escalar sin comprometer el equilibrio entre personas y precisión técnica.</p>
+          </article>
         </div>
-    </footer>
+      </section>
 
-    <script src="assets/js/main.js"></script>
+      <!-- Valores -->
+      <section class="section" aria-labelledby="valores-title">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-title">Valores</p>
+            <h2 class="section-heading" id="valores-title">Lo que nos define</h2>
+          </div>
+          <div class="valores-grid">
+            <div class="valor-item">
+              <h3>Automatización sin alucinaciones</h3>
+              <p>Arquitecturas RAG que garantizan respuestas respaldadas por fuentes verificadas.</p>
+            </div>
+            <div class="valor-item">
+              <h3>De la teoría a la ejecución</h3>
+              <p>Capacitaciones diseñadas para aplicar desde el día uno.</p>
+            </div>
+            <div class="valor-item">
+              <h3>Cooperación internacional</h3>
+              <p>Alianzas entre universidades, empresas y países para generar conocimiento sin fronteras.</p>
+            </div>
+            <div class="valor-item">
+              <h3>Adopción sostenible</h3>
+              <p>Acompañamos a las organizaciones para que la adopción sea sostenible en el tiempo.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Historia -->
+      <section class="section bg-gray" aria-labelledby="historia-title">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-title">Historia</p>
+            <h2 class="section-heading" id="historia-title">Nuestra trayectoria</h2>
+            <p class="section-sub">Construyendo el futuro de la consultoría en datos e IA en América Latina desde 2024.</p>
+          </div>
+          <div class="historia-timeline">
+            <p><strong style="color:var(--light);">2024</strong> — Sicilia Labs se consolida como consultora boutique de IA aplicada en Argentina, enfocada en educación, comercio y desarrollo de software.</p>
+            <p><strong style="color:var(--light);">2025</strong> — Lanzamos CogniBookIA, nuestra plataforma educativa con arquitectura RAG, desarrollada en conjunto con la Universidad Nacional de Lanús.</p>
+            <p><strong style="color:var(--green);">2026</strong> — Presentamos Cognibookia en el Congreso Internacional de Educación y Conocimiento en la Universidad de Alicante, España. Iniciamos nuestro programa de capacitación corporativa con B2BLatam. Seguimos creciendo e innovando.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Empresa CTA -->
+      <section class="final-cta" aria-labelledby="empresa-cta-title">
+        <div class="final-cta-inner">
+          <p>¿Quieres saber más?</p>
+          <h2 id="empresa-cta-title">Conversemos</h2>
+          <div class="cta-actions">
+            <a href="mailto:gussiciliano@gmail.com" class="btn-primary">
+              Escríbenos
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <button class="btn-outline" data-page="home">Volver al inicio</button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+    <!-- ────── END EMPRESA ────── -->
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" aria-label="Pie de página">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-wrap">
+            <img src="assets/img/full-logo.png" alt="Sicilia Labs" width="180" height="55">
+          </div>
+          <p>Ingeniería y arquitectura en inteligencia artificial aplicada. Transformamos la educación, el comercio y el desarrollo de software con orquestación de agentes autónomos.</p>
+          <a href="mailto:gussiciliano@gmail.com" class="footer-email">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+            gussiciliano@gmail.com
+          </a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Navegación</p>
+          <button data-page="empresa">Empresa</button>
+          <button data-section="soluciones">Servicios</button>
+          <button data-section="metodologia">Metodología</button>
+          <button data-section="casos-de-exito">Casos de Éxito</button>
+          <button data-section="contacto">Contacto</button>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Contacto</p>
+          <a href="mailto:gussiciliano@gmail.com">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+            Correo
+          </a>
+          <a href="https://www.linkedin.com/in/gustavo-hernan-siciliano/" aria-label="LinkedIn de Sicilia Labs" target="_blank" rel="noopener noreferrer">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sicilia Labs. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

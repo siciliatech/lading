@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 56" fill="none">
+  <rect width="400" height="56" fill="none"/>
+  <g transform="translate(0, 10)">
+    <rect x="0" y="0" width="36" height="36" rx="4" fill="#1B3A5C"/>
+    <path d="M9 18h18M18 9v18" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="18" cy="18" r="5" fill="#4A9B5E"/>
+  </g>
+  <g transform="translate(50, 10)">
+    <text font-family="'Montserrat',Arial,sans-serif" font-weight="700" font-size="28" fill="#1B3A5C" letter-spacing="0.01em">Sicilia</text>
+    <text x="114" font-family="'Montserrat',Arial,sans-serif" font-weight="600" font-size="28" fill="#3B82C4" letter-spacing="0.01em">Labs</text>
+  </g>
+</svg>
