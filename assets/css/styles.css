@@ -872,6 +872,15 @@ ul { list-style: none; }
   color: rgba(255, 255, 255, 0.22);
   margin: 0;
 }
+.footer-polo-logo {
+  height: 30px;
+  width: auto;
+  opacity: 0.45;
+  transition: opacity 0.2s;
+}
+.footer-polo-logo:hover {
+  opacity: 0.8;
+}
 
 /* Empresa Page */
 .empresa-hero {
