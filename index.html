@@ -113,27 +113,148 @@
               </div>
             </div>
             <div class="hero-visual" aria-hidden="true">
-              <svg class="neural-svg" viewBox="0 0 460 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="230" cy="200" r="156" stroke="rgba(59,130,196,0.15)" stroke-width="1"/>
-                <circle cx="230" cy="200" r="106" stroke="rgba(59,130,196,0.15)" stroke-width="1"/>
-                <circle cx="230" cy="200" r="56" stroke="rgba(59,130,196,0.15)" stroke-width="1"/>
-                <circle cx="230" cy="200" r="14" fill="#3B82C4" opacity="0.4"/>
-                <circle cx="230" cy="44" r="8" fill="#4A9B5E" opacity="0.6"/>
-                <circle cx="356" cy="200" r="8" fill="#3B82C4" opacity="0.6"/>
-                <circle cx="104" cy="200" r="8" fill="#4A9B5E" opacity="0.6"/>
-                <circle cx="230" cy="356" r="8" fill="#3B82C4" opacity="0.6"/>
-                <circle cx="328" cy="96" r="6" fill="#4A9B5E" opacity="0.5"/>
-                <circle cx="328" cy="304" r="6" fill="#3B82C4" opacity="0.5"/>
-                <circle cx="132" cy="96" r="6" fill="#4A9B5E" opacity="0.5"/>
-                <circle cx="132" cy="304" r="6" fill="#3B82C4" opacity="0.5"/>
-                <line x1="230" y1="44" x2="230" y2="186" stroke="rgba(59,130,196,0.25)" stroke-width="1"/>
-                <line x1="356" y1="200" x2="244" y2="200" stroke="rgba(74,155,94,0.25)" stroke-width="1"/>
-                <line x1="104" y1="200" x2="216" y2="200" stroke="rgba(74,155,94,0.25)" stroke-width="1"/>
-                <line x1="230" y1="356" x2="230" y2="214" stroke="rgba(59,130,196,0.25)" stroke-width="1"/>
-                <line x1="328" y1="96" x2="244" y2="186" stroke="rgba(59,130,196,0.15)" stroke-width="1"/>
-                <line x1="328" y1="304" x2="244" y2="214" stroke="rgba(59,130,196,0.15)" stroke-width="1"/>
-                <line x1="132" y1="96" x2="216" y2="186" stroke="rgba(59,130,196,0.15)" stroke-width="1"/>
-                <line x1="132" y1="304" x2="216" y2="214" stroke="rgba(59,130,196,0.15)" stroke-width="1"/>
+              <svg class="neural-svg" viewBox="0 0 800 450" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="gradInput" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#3B82C4"/>
+                    <stop offset="100%" stop-color="#60A5FA"/>
+                  </linearGradient>
+                  <linearGradient id="gradHidden1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#8B5CF6"/>
+                    <stop offset="100%" stop-color="#D946EF"/>
+                  </linearGradient>
+                  <linearGradient id="gradHidden2" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#D946EF"/>
+                    <stop offset="100%" stop-color="#F97316"/>
+                  </linearGradient>
+                  <linearGradient id="gradOutput" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#F97316"/>
+                    <stop offset="100%" stop-color="#FB923C"/>
+                  </linearGradient>
+                  <linearGradient id="conn1" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#3B82C4" stop-opacity="0.3"/>
+                    <stop offset="50%" stop-color="#8B5CF6" stop-opacity="0.3"/>
+                    <stop offset="100%" stop-color="#D946EF" stop-opacity="0.15"/>
+                  </linearGradient>
+                  <linearGradient id="conn2" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#D946EF" stop-opacity="0.25"/>
+                    <stop offset="50%" stop-color="#D946EF" stop-opacity="0.25"/>
+                    <stop offset="100%" stop-color="#F97316" stop-opacity="0.15"/>
+                  </linearGradient>
+                  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="4" result="blur"/>
+                    <feMerge>
+                      <feMergeNode in="blur"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
+                  <filter id="glowIntense" x="-100%" y="-100%" width="300%" height="300%">
+                    <feGaussianBlur stdDeviation="8" result="blur"/>
+                    <feMerge>
+                      <feMergeNode in="blur"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
+                  <filter id="glowSoft" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="2" result="blur"/>
+                    <feMerge>
+                      <feMergeNode in="blur"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
+                </defs>
+                <style>
+                  @keyframes pulse { 0%, 100% { opacity: 0.6; } 50% { opacity: 1; } }
+                  @keyframes pulseSoft { 0%, 100% { opacity: 0.4; } 50% { opacity: 0.7; } }
+                  @keyframes dashFlow { to { stroke-dashoffset: -200; } }
+                  .node-input { animation: pulse 3s ease-in-out infinite; }
+                  .node-hidden { animation: pulseSoft 4s ease-in-out infinite; }
+                  .node-output { animation: pulse 2.5s ease-in-out infinite; }
+                  .conn-flow { stroke-dasharray: 4 6; animation: dashFlow 3s linear infinite; }
+                </style>
+                <rect width="800" height="450" fill="var(--dark)"/>
+                <g stroke="rgba(255,255,255,0.025)" stroke-width="0.5">
+                  <line x1="0" y1="0" x2="800" y2="0"/> <line x1="0" y1="50" x2="800" y2="50"/>
+                  <line x1="0" y1="100" x2="800" y2="100"/> <line x1="0" y1="150" x2="800" y2="150"/>
+                  <line x1="0" y1="200" x2="800" y2="200"/> <line x1="0" y1="250" x2="800" y2="250"/>
+                  <line x1="0" y1="300" x2="800" y2="300"/> <line x1="0" y1="350" x2="800" y2="350"/>
+                  <line x1="0" y1="400" x2="800" y2="400"/> <line x1="0" y1="450" x2="800" y2="450"/>
+                  <line x1="0" y1="0" x2="0" y2="450"/> <line x1="100" y1="0" x2="100" y2="450"/>
+                  <line x1="200" y1="0" x2="200" y2="450"/> <line x1="300" y1="0" x2="300" y2="450"/>
+                  <line x1="400" y1="0" x2="400" y2="450"/> <line x1="500" y1="0" x2="500" y2="450"/>
+                  <line x1="600" y1="0" x2="600" y2="450"/> <line x1="700" y1="0" x2="700" y2="450"/>
+                  <line x1="800" y1="0" x2="800" y2="450"/>
+                </g>
+                <g stroke="url(#conn1)" stroke-width="0.8" fill="none">
+                  <line x1="100" y1="110" x2="210" y2="70"/> <line x1="100" y1="110" x2="210" y2="140"/>
+                  <line x1="100" y1="110" x2="210" y2="210"/> <line x1="100" y1="110" x2="210" y2="290"/>
+                  <line x1="100" y1="190" x2="210" y2="70"/> <line x1="100" y1="190" x2="210" y2="140"/>
+                  <line x1="100" y1="190" x2="210" y2="210"/> <line x1="100" y1="190" x2="210" y2="290"/>
+                  <line x1="100" y1="190" x2="210" y2="360"/> <line x1="100" y1="270" x2="210" y2="140"/>
+                  <line x1="100" y1="270" x2="210" y2="210"/> <line x1="100" y1="270" x2="210" y2="290"/>
+                  <line x1="100" y1="270" x2="210" y2="360"/> <line x1="100" y1="350" x2="210" y2="70"/>
+                  <line x1="100" y1="350" x2="210" y2="210"/> <line x1="100" y1="350" x2="210" y2="290"/>
+                  <line x1="100" y1="350" x2="210" y2="360"/>
+                  <line x1="230" y1="70" x2="370" y2="60"/> <line x1="230" y1="70" x2="370" y2="150"/>
+                  <line x1="230" y1="70" x2="370" y2="240"/> <line x1="230" y1="140" x2="370" y2="60"/>
+                  <line x1="230" y1="140" x2="370" y2="150"/> <line x1="230" y1="140" x2="370" y2="240"/>
+                  <line x1="230" y1="140" x2="370" y2="330"/> <line x1="230" y1="210" x2="370" y2="60"/>
+                  <line x1="230" y1="210" x2="370" y2="150"/> <line x1="230" y1="210" x2="370" y2="240"/>
+                  <line x1="230" y1="210" x2="370" y2="330"/> <line x1="230" y1="290" x2="370" y2="150"/>
+                  <line x1="230" y1="290" x2="370" y2="240"/> <line x1="230" y1="290" x2="370" y2="330"/>
+                  <line x1="230" y1="360" x2="370" y2="60"/> <line x1="230" y1="360" x2="370" y2="150"/>
+                  <line x1="230" y1="360" x2="370" y2="330"/>
+                </g>
+                <g stroke="url(#conn2)" stroke-width="0.9" fill="none">
+                  <line x1="390" y1="60" x2="570" y2="130"/> <line x1="390" y1="60" x2="570" y2="300"/>
+                  <line x1="390" y1="150" x2="570" y2="130"/> <line x1="390" y1="150" x2="570" y2="300"/>
+                  <line x1="390" y1="240" x2="570" y2="130"/> <line x1="390" y1="240" x2="570" y2="300"/>
+                  <line x1="390" y1="330" x2="570" y2="130"/> <line x1="390" y1="330" x2="570" y2="300"/>
+                </g>
+                <g class="node-input">
+                  <circle cx="100" cy="110" r="8" fill="url(#gradInput)" filter="url(#glow)"/>
+                  <circle cx="100" cy="190" r="8" fill="url(#gradInput)" filter="url(#glow)"/>
+                  <circle cx="100" cy="270" r="8" fill="url(#gradInput)" filter="url(#glow)"/>
+                  <circle cx="100" cy="350" r="8" fill="url(#gradInput)" filter="url(#glow)"/>
+                </g>
+                <g class="node-hidden">
+                  <circle cx="220" cy="70" r="9" fill="url(#gradHidden1)" filter="url(#glow)"/>
+                  <circle cx="220" cy="140" r="7" fill="url(#gradHidden1)" filter="url(#glowSoft)"/>
+                  <circle cx="220" cy="210" r="10" fill="url(#gradHidden1)" filter="url(#glow)"/>
+                  <circle cx="220" cy="290" r="7" fill="url(#gradHidden1)" filter="url(#glowSoft)"/>
+                  <circle cx="220" cy="360" r="8" fill="url(#gradHidden1)" filter="url(#glow)"/>
+                </g>
+                <g class="node-hidden">
+                  <circle cx="380" cy="60" r="8" fill="url(#gradHidden2)" filter="url(#glow)"/>
+                  <circle cx="380" cy="150" r="10" fill="url(#gradHidden2)" filter="url(#glow)"/>
+                  <circle cx="380" cy="240" r="7" fill="url(#gradHidden2)" filter="url(#glowSoft)"/>
+                  <circle cx="380" cy="330" r="9" fill="url(#gradHidden2)" filter="url(#glow)"/>
+                </g>
+                <g class="node-output">
+                  <circle cx="580" cy="130" r="12" fill="url(#gradOutput)" filter="url(#glowIntense)"/>
+                  <circle cx="580" cy="300" r="12" fill="url(#gradOutput)" filter="url(#glowIntense)"/>
+                </g>
+                <g class="node-input">
+                  <circle cx="100" cy="110" r="14" fill="none" stroke="url(#gradInput)" stroke-width="1" opacity="0.3" filter="url(#glowSoft)"/>
+                  <circle cx="100" cy="190" r="14" fill="none" stroke="url(#gradInput)" stroke-width="1" opacity="0.3" filter="url(#glowSoft)"/>
+                  <circle cx="100" cy="270" r="14" fill="none" stroke="url(#gradInput)" stroke-width="1" opacity="0.3" filter="url(#glowSoft)"/>
+                  <circle cx="100" cy="350" r="14" fill="none" stroke="url(#gradInput)" stroke-width="1" opacity="0.3" filter="url(#glowSoft)"/>
+                </g>
+                <g stroke="url(#conn1)" stroke-width="1.2" fill="none" class="conn-flow" opacity="0.5">
+                  <line x1="100" y1="190" x2="220" y2="210"/>
+                  <line x1="220" y1="210" x2="380" y2="150"/>
+                  <line x1="380" y1="150" x2="580" y2="130"/>
+                </g>
+                <radialGradient id="bgGlowLeft" cx="20%" cy="50%" r="40%">
+                  <stop offset="0%" stop-color="#3B82C4" stop-opacity="0.06"/>
+                  <stop offset="100%" stop-color="var(--dark)" stop-opacity="0"/>
+                </radialGradient>
+                <radialGradient id="bgGlowRight" cx="80%" cy="50%" r="30%">
+                  <stop offset="0%" stop-color="#F97316" stop-opacity="0.05"/>
+                  <stop offset="100%" stop-color="var(--dark)" stop-opacity="0"/>
+                </radialGradient>
+                <rect width="800" height="450" fill="url(#bgGlowLeft)"/>
+                <rect width="800" height="450" fill="url(#bgGlowRight)"/>
               </svg>
             </div>
           </div>
@@ -144,9 +265,9 @@
       <section class="clients" aria-label="Clientes">
         <p class="clients-label">Confían en nosotros</p>
         <div class="clients-list">
-          <span class="client-item">UNLa</span>
-          <span class="client-item">B2BLatam</span>
-          <span class="client-item">Universidad de Alicante</span>
+          <span class="client-item"><img src="assets/img/clients/unla.png" alt="Universidad Nacional de Lanús" loading="lazy"></span>
+          <span class="client-item"><img src="assets/img/clients/b2b.webp" alt="B2BLatam" loading="lazy"></span>
+          <span class="client-item"><img src="assets/img/clients/ua.png" alt="Universidad de Alicante" loading="lazy"></span>
         </div>
       </section>
 
@@ -196,7 +317,7 @@
       </section>
 
       <!-- Methodology -->
-      <section class="section bg-gray" id="metodologia" aria-labelledby="method-title">
+      <section class="section methodology-section" id="metodologia" aria-labelledby="method-title">
         <div class="container">
           <div class="section-header center">
             <p class="section-title">Metodología</p>
@@ -204,33 +325,38 @@
             <p class="section-sub" style="margin-left:auto;margin-right:auto;">Un proceso iterativo, ágil y centrado en resultados que garantiza la entrega de valor en cada etapa.</p>
           </div>
         </div>
-        <div class="container">
+        <div class="container methodology-container">
+          <div class="timeline-track" aria-hidden="true"></div>
           <div class="methodology-grid">
             <div class="method-step">
-              <div class="method-step-top">
-                <span class="method-step-num">01</span>
+              <div class="method-step-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
               </div>
+              <span class="method-step-label">PASO 01</span>
               <h3>Diagnóstico</h3>
               <p>Analizamos tu situación actual, identificamos oportunidades y definimos KPIs de éxito.</p>
             </div>
             <div class="method-step">
-              <div class="method-step-top">
-                <span class="method-step-num">02</span>
+              <div class="method-step-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
               </div>
+              <span class="method-step-label">PASO 02</span>
               <h3>Estrategia</h3>
               <p>Diseñamos una hoja de ruta personalizada alineada a tus objetivos de negocio.</p>
             </div>
             <div class="method-step">
-              <div class="method-step-top">
-                <span class="method-step-num">03</span>
+              <div class="method-step-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
               </div>
+              <span class="method-step-label">PASO 03</span>
               <h3>Implementación</h3>
               <p>Ejecutamos con equipos multidisciplinarios, metodologías ágiles y entregas iterativas.</p>
             </div>
             <div class="method-step">
-              <div class="method-step-top">
-                <span class="method-step-num">04</span>
+              <div class="method-step-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
               </div>
+              <span class="method-step-label">PASO 04</span>
               <h3>Optimización</h3>
               <p>Medimos, aprendemos y escalamos. Mejora continua basada en datos reales.</p>
             </div>
@@ -531,12 +657,14 @@
           <div class="section-header">
             <p class="section-title">Historia</p>
             <h2 class="section-heading" id="historia-title">Nuestra trayectoria</h2>
-            <p class="section-sub">Construyendo el futuro de la consultoría en datos e IA en América Latina desde 2024.</p>
+            <p class="section-sub">Construyendo el futuro de la consultoría en datos e IA en América Latina desde 2025.</p>
           </div>
           <div class="historia-timeline">
-            <p><strong style="color:var(--light);">2024</strong> — Sicilia Labs se consolida como consultora boutique de IA aplicada en Argentina, enfocada en educación, comercio y desarrollo de software.</p>
-            <p><strong style="color:var(--light);">2025</strong> — Lanzamos CogniBookIA, nuestra plataforma educativa con arquitectura RAG, desarrollada en conjunto con la Universidad Nacional de Lanús.</p>
-            <p><strong style="color:var(--green);">2026</strong> — Presentamos Cognibookia en el Congreso Internacional de Educación y Conocimiento en la Universidad de Alicante, España. Iniciamos nuestro programa de capacitación corporativa con B2BLatam. Seguimos creciendo e innovando.</p>
+            <p><strong style="color:var(--light);">Noviembre 2025</strong> — Comienza la planeación de Sicilia Labs Tech con 2 miembros fundadores y el desarrollo de varios proyectos e ideas.</p>
+            <p><strong style="color:var(--light);">Diciembre 2025</strong> — Presentamos el prototipo CogniBookIA, nuestra plataforma educativa con arquitectura RAG, desarrollada en conjunto con la Universidad Nacional de Lanús.</p>
+            <p><strong style="color:var(--green);">Abril 2026</strong> — Se consolida la creación de Sicilia Labs Tech con la unión de dos miembros fundadores más.</p>
+            <p><strong style="color:var(--green);">Junio 2026</strong> — Presentamos Cognibookia en el Congreso Internacional de Educación y Conocimiento en la Universidad de Alicante, España. Iniciamos nuestro programa de capacitación corporativa con B2BLatam.</p>
+            <p><strong style="color:var(--light);">Julio 2026</strong> — Seguimos creciendo e innovando.</p>
           </div>
         </div>
       </section>
