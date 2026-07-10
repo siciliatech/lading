@@ -30,49 +30,15 @@
     });
   }
 
-  /* ── Page switching (home / empresa) ── */
-  const pageHome = document.getElementById('page-home');
-  const pageEmpresa = document.getElementById('page-empresa');
-  const empresaBtns = document.querySelectorAll('[data-page="empresa"]');
-  const homeBtns = document.querySelectorAll('[data-page="home"]');
-
-  function showEmpresa() {
-    if (pageHome) pageHome.classList.add('hidden');
-    if (pageEmpresa) pageEmpresa.classList.add('active');
-    document.querySelectorAll('.nav-links [data-page="empresa"], .nav-mobile [data-page="empresa"]').forEach(function (btn) {
-      btn.classList.add('active-page');
+  /* ── Close mobile menu on nav link click ── */
+  if (mobileMenu && hamburger) {
+    mobileMenu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
     });
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    document.title = 'Empresa | Sicilia Labs';
   }
-
-  function showHome() {
-    if (pageHome) pageHome.classList.remove('hidden');
-    if (pageEmpresa) pageEmpresa.classList.remove('active');
-    document.querySelectorAll('.nav-links [data-page="empresa"], .nav-mobile [data-page="empresa"]').forEach(function (btn) {
-      btn.classList.remove('active-page');
-    });
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    document.title = 'Sicilia Labs';
-  }
-
-  empresaBtns.forEach(function (btn) {
-    btn.addEventListener('click', function (e) {
-      e.preventDefault();
-      if (mobileMenu) mobileMenu.classList.remove('open');
-      if (hamburger) hamburger.setAttribute('aria-expanded', 'false');
-      showEmpresa();
-    });
-  });
-
-  homeBtns.forEach(function (btn) {
-    btn.addEventListener('click', function (e) {
-      e.preventDefault();
-      if (mobileMenu) mobileMenu.classList.remove('open');
-      if (hamburger) hamburger.setAttribute('aria-expanded', 'false');
-      showHome();
-    });
-  });
 
   /* ── IntersectionObserver: fade-in ── */
   const animateEls = document.querySelectorAll('.method-step, .caso-card');
@@ -104,21 +70,6 @@
       if (!card) return;
       var expanded = card.classList.toggle('expanded');
       this.textContent = expanded ? 'Ver menos' : 'Ver más';
-    });
-  });
-
-  /* ── Smooth nav link scroll (fallback) ── */
-  document.querySelectorAll('[data-section]').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var sectionId = this.getAttribute('data-section');
-      if (sectionId) {
-        var target = document.getElementById(sectionId);
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          mobileMenu.classList.remove('open');
-          hamburger.setAttribute('aria-expanded', 'false');
-        }
-      }
     });
   });
 

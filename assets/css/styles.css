@@ -93,10 +93,7 @@ ul { list-style: none; }
 }
 .nav-logo img { height: 40px; width: auto; }
 .nav-links { display: flex; align-items: center; gap: 36px; }
-.nav-links button {
-  background: none;
-  border: none;
-  cursor: pointer;
+.nav-links .nav-link {
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: 14px;
@@ -105,8 +102,8 @@ ul { list-style: none; }
   border-bottom: 2px solid transparent;
   transition: color 0.15s;
 }
-.nav-links button:hover { color: var(--dark); }
-.nav-links button.active-page { border-bottom-color: var(--green); color: var(--dark); }
+.nav-links .nav-link:hover { color: var(--dark); }
+.nav-links .nav-link.active-page { border-bottom-color: var(--green); color: var(--dark); }
 .nav-cta {
   background: var(--green);
   color: var(--white);
@@ -137,18 +134,15 @@ ul { list-style: none; }
   gap: 4px;
 }
 .nav-mobile.open { display: flex; }
-.nav-mobile button {
-  background: none;
-  border: none;
-  cursor: pointer;
+.nav-mobile .nav-link {
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: 15px;
   color: var(--black);
   padding: 12px 8px;
-  text-align: left;
+  display: block;
 }
-.nav-mobile button.active-page { color: var(--green); }
+.nav-mobile .nav-link.active-page { color: var(--green); }
 .nav-mobile .nav-cta { margin-top: 8px; text-align: center; }
 
 /* Hero */
@@ -545,14 +539,65 @@ ul { list-style: none; }
 }
 
 /* Awards */
-.awards-placeholder {
-  border: 1px dashed rgba(47, 93, 140, 0.2);
-  border-radius: 4px;
-  padding: 48px 32px;
-  max-width: 560px;
+.award-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 36px;
+  max-width: 640px;
   margin: 0 auto;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  transition: border-color 0.2s;
 }
+.award-card:hover { border-color: var(--light); }
+.award-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+.award-badge {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--light);
+}
+.award-card h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--light);
+  line-height: 1.3;
+  margin: 0;
+}
+.award-card p {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0;
+}
+.award-card .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--light);
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 14px;
+  padding: 14px 28px;
+  border-radius: 4px;
+  transition: background 0.15s;
+}
+.award-card .btn-primary:hover { background: #2e6da4; }
+.btn-blue { background: var(--light); }
+.btn-blue:hover { background: #2e6da4; }
 
 /* Casos de Éxito */
 .casos-grid {
@@ -797,9 +842,6 @@ ul { list-style: none; }
 }
 .footer-brand .logo-wrap {
   display: block;
-  background: rgba(255, 255, 255, 0.08);
-  padding: 10px 14px;
-  border-radius: 6px;
   margin-bottom: 20px;
   max-width: 300px;
 }
@@ -1014,9 +1056,6 @@ ul { list-style: none; }
   color: var(--muted);
   margin: 0 0 20px;
 }
-.page-empresa { display: none; opacity: 0; transition: opacity 0.35s ease; }
-.page-empresa.active { display: block; opacity: 1; }
-.page-home.hidden { display: none; }
 
 /* Inline SVG neural network utility */
 .neural-svg { width: 100%; max-width: 500px; height: auto; }
@@ -1069,6 +1108,8 @@ ul { list-style: none; }
   .hero-actions .btn-primary,
   .hero-actions .btn-secondary { text-align: center; justify-content: center; }
   .cta-actions { flex-direction: column; align-items: center; }
+  .award-card { padding: 28px 20px; }
+  .award-card .btn-primary { width: 100%; justify-content: center; }
 }
 
 /* Selection */
