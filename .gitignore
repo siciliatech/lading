@@ -1,0 +1,11 @@
+# Archivos de documentación para agentes (no necesarios para producir)
+AGENT.md
+guidelines/
+skills/
+opencode.json
+
+# Sistema
+.DS_Store
+Thumbs.db
+*.swp
+*.swo

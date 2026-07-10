@@ -1,98 +1,607 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-MX">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sicilia Labs - Consultora en Inteligencia Artificial aplicada. Orquestación de agentes y arquitectura RAG para educación, comercio minorista y desarrollo de software.">
-    <title>Sicilia Labs | Inteligencia Artificial Aplicada</title>
-    
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sicilia Labs</title>
+  <meta name="description" content="Sicilia Labs — Ingeniería y arquitectura en inteligencia artificial. Soluciones RAG para educación, automatización comercial y capacitación en IA para empresas.">
+  <link rel="canonical" href="https://sicilialabs.tech/">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sicilia Labs — Ingeniería y Arquitectura en IA">
+  <meta property="og:description" content="Soluciones RAG para educación, automatización comercial con WhatsApp Business API y capacitación in-company en IA.">
+  <meta property="og:url" content="https://sicilialabs.tech/">
+  <meta property="og:site_name" content="Sicilia Labs">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sicilia Labs — Ingeniería y Arquitectura en IA">
+  <meta name="twitter:description" content="Soluciones RAG para educación, automatización comercial con WhatsApp Business API y capacitación in-company en IA.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Sicilia Labs",
+    "url": "https://sicilialabs.tech/",
+    "email": "gussiciliano@gmail.com",
+    "description": "Ingeniería y arquitectura en inteligencia artificial. Soluciones RAG, automatización comercial y capacitación en IA."
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="container">
-            <div class="logo">
-                <img src="assets/img/full-logo.png" alt="Logo de Sicilia Labs">
+  <a href="#main-content" class="sr-only" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">Saltar al contenido principal</a>
+
+  <!-- Nav -->
+  <nav class="nav" aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Ir al inicio">
+        <img src="assets/img/full-logo.png" alt="Sicilia Labs" width="180" height="55">
+      </a>
+
+      <div class="nav-links">
+        <a href="empresa.html" class="nav-link">Empresa</a>
+        <a href="#soluciones" class="nav-link">Servicios</a>
+        <a href="#metodologia" class="nav-link">Metodología</a>
+        <a href="#casos-de-exito" class="nav-link">Casos de Éxito</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </div>
+
+      <a href="mailto:gussiciliano@gmail.com" class="nav-cta">Charlemos</a>
+
+      <button class="nav-hamburger" aria-label="Abrir menú de navegación" aria-expanded="false">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7"></line>
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="17" x2="20" y2="17"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="nav-mobile" role="menu">
+      <a href="empresa.html" class="nav-link" role="menuitem">Empresa</a>
+      <a href="#soluciones" class="nav-link" role="menuitem">Servicios</a>
+      <a href="#metodologia" class="nav-link" role="menuitem">Metodología</a>
+      <a href="#casos-de-exito" class="nav-link" role="menuitem">Casos de Éxito</a>
+      <a href="#contacto" class="nav-link" role="menuitem">Contacto</a>
+      <a href="mailto:gussiciliano@gmail.com" class="nav-cta">Charlemos</a>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ────── HOME ────── -->
+
+      <!-- Hero -->
+      <section class="hero" aria-label="Hero">
+        <div class="hero-inner">
+          <div class="hero-grid">
+            <div>
+              <div class="hero-badge" role="status">
+                <span class="hero-badge-dot" aria-hidden="true"></span>
+                <span class="hero-badge-text">Ingeniería y Arquitectura en IA</span>
+              </div>
+              <h1>Ingeniería y Arquitectura en <span>Inteligencia Artificial</span></h1>
+              <p>Automatización precisa para educación, comercio y desarrollo de software. IA aplicada sin hype, con resultados medibles.</p>
+              <div class="hero-actions">
+                <a href="mailto:gussiciliano@gmail.com" class="btn-primary">
+                  Charlemos
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <a href="#soluciones" class="btn-secondary">Nuestros Servicios</a>
+              </div>
+              <div class="hero-pillars">
+                <div class="hero-pillar">
+                  <span class="hero-pillar-dot" aria-hidden="true"></span>
+                  <span>Educación</span>
+                </div>
+                <div class="hero-pillar">
+                  <span class="hero-pillar-dot" aria-hidden="true"></span>
+                  <span>Comercio</span>
+                </div>
+                <div class="hero-pillar">
+                  <span class="hero-pillar-dot" aria-hidden="true"></span>
+                  <span>Desarrollo de Software</span>
+                </div>
+              </div>
             </div>
-            <nav>
+            <div class="hero-visual" aria-hidden="true">
+              <svg class="neural-svg" viewBox="0 0 800 450" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="gradInput" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#3B82C4"/>
+                    <stop offset="100%" stop-color="#60A5FA"/>
+                  </linearGradient>
+                  <linearGradient id="gradHidden1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#8B5CF6"/>
+                    <stop offset="100%" stop-color="#D946EF"/>
+                  </linearGradient>
+                  <linearGradient id="gradHidden2" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#D946EF"/>
+                    <stop offset="100%" stop-color="#F97316"/>
+                  </linearGradient>
+                  <linearGradient id="gradOutput" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#F97316"/>
+                    <stop offset="100%" stop-color="#FB923C"/>
+                  </linearGradient>
+                  <linearGradient id="conn1" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#3B82C4" stop-opacity="0.3"/>
+                    <stop offset="50%" stop-color="#8B5CF6" stop-opacity="0.3"/>
+                    <stop offset="100%" stop-color="#D946EF" stop-opacity="0.15"/>
+                  </linearGradient>
+                  <linearGradient id="conn2" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#D946EF" stop-opacity="0.25"/>
+                    <stop offset="50%" stop-color="#D946EF" stop-opacity="0.25"/>
+                    <stop offset="100%" stop-color="#F97316" stop-opacity="0.15"/>
+                  </linearGradient>
+                  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="4" result="blur"/>
+                    <feMerge>
+                      <feMergeNode in="blur"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
+                  <filter id="glowIntense" x="-100%" y="-100%" width="300%" height="300%">
+                    <feGaussianBlur stdDeviation="8" result="blur"/>
+                    <feMerge>
+                      <feMergeNode in="blur"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
+                  <filter id="glowSoft" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="2" result="blur"/>
+                    <feMerge>
+                      <feMergeNode in="blur"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
+                </defs>
+                <style>
+                  @keyframes pulse { 0%, 100% { opacity: 0.6; } 50% { opacity: 1; } }
+                  @keyframes pulseSoft { 0%, 100% { opacity: 0.4; } 50% { opacity: 0.7; } }
+                  @keyframes dashFlow { to { stroke-dashoffset: -200; } }
+                  .node-input { animation: pulse 3s ease-in-out infinite; }
+                  .node-hidden { animation: pulseSoft 4s ease-in-out infinite; }
+                  .node-output { animation: pulse 2.5s ease-in-out infinite; }
+                  .conn-flow { stroke-dasharray: 4 6; animation: dashFlow 3s linear infinite; }
+                </style>
+                <rect width="800" height="450" fill="var(--dark)"/>
+                <g stroke="rgba(255,255,255,0.025)" stroke-width="0.5">
+                  <line x1="0" y1="0" x2="800" y2="0"/> <line x1="0" y1="50" x2="800" y2="50"/>
+                  <line x1="0" y1="100" x2="800" y2="100"/> <line x1="0" y1="150" x2="800" y2="150"/>
+                  <line x1="0" y1="200" x2="800" y2="200"/> <line x1="0" y1="250" x2="800" y2="250"/>
+                  <line x1="0" y1="300" x2="800" y2="300"/> <line x1="0" y1="350" x2="800" y2="350"/>
+                  <line x1="0" y1="400" x2="800" y2="400"/> <line x1="0" y1="450" x2="800" y2="450"/>
+                  <line x1="0" y1="0" x2="0" y2="450"/> <line x1="100" y1="0" x2="100" y2="450"/>
+                  <line x1="200" y1="0" x2="200" y2="450"/> <line x1="300" y1="0" x2="300" y2="450"/>
+                  <line x1="400" y1="0" x2="400" y2="450"/> <line x1="500" y1="0" x2="500" y2="450"/>
+                  <line x1="600" y1="0" x2="600" y2="450"/> <line x1="700" y1="0" x2="700" y2="450"/>
+                  <line x1="800" y1="0" x2="800" y2="450"/>
+                </g>
+                <g stroke="url(#conn1)" stroke-width="0.8" fill="none">
+                  <line x1="100" y1="110" x2="210" y2="70"/> <line x1="100" y1="110" x2="210" y2="140"/>
+                  <line x1="100" y1="110" x2="210" y2="210"/> <line x1="100" y1="110" x2="210" y2="290"/>
+                  <line x1="100" y1="190" x2="210" y2="70"/> <line x1="100" y1="190" x2="210" y2="140"/>
+                  <line x1="100" y1="190" x2="210" y2="210"/> <line x1="100" y1="190" x2="210" y2="290"/>
+                  <line x1="100" y1="190" x2="210" y2="360"/> <line x1="100" y1="270" x2="210" y2="140"/>
+                  <line x1="100" y1="270" x2="210" y2="210"/> <line x1="100" y1="270" x2="210" y2="290"/>
+                  <line x1="100" y1="270" x2="210" y2="360"/> <line x1="100" y1="350" x2="210" y2="70"/>
+                  <line x1="100" y1="350" x2="210" y2="210"/> <line x1="100" y1="350" x2="210" y2="290"/>
+                  <line x1="100" y1="350" x2="210" y2="360"/>
+                  <line x1="230" y1="70" x2="370" y2="60"/> <line x1="230" y1="70" x2="370" y2="150"/>
+                  <line x1="230" y1="70" x2="370" y2="240"/> <line x1="230" y1="140" x2="370" y2="60"/>
+                  <line x1="230" y1="140" x2="370" y2="150"/> <line x1="230" y1="140" x2="370" y2="240"/>
+                  <line x1="230" y1="140" x2="370" y2="330"/> <line x1="230" y1="210" x2="370" y2="60"/>
+                  <line x1="230" y1="210" x2="370" y2="150"/> <line x1="230" y1="210" x2="370" y2="240"/>
+                  <line x1="230" y1="210" x2="370" y2="330"/> <line x1="230" y1="290" x2="370" y2="150"/>
+                  <line x1="230" y1="290" x2="370" y2="240"/> <line x1="230" y1="290" x2="370" y2="330"/>
+                  <line x1="230" y1="360" x2="370" y2="60"/> <line x1="230" y1="360" x2="370" y2="150"/>
+                  <line x1="230" y1="360" x2="370" y2="330"/>
+                </g>
+                <g stroke="url(#conn2)" stroke-width="0.9" fill="none">
+                  <line x1="390" y1="60" x2="570" y2="130"/> <line x1="390" y1="60" x2="570" y2="300"/>
+                  <line x1="390" y1="150" x2="570" y2="130"/> <line x1="390" y1="150" x2="570" y2="300"/>
+                  <line x1="390" y1="240" x2="570" y2="130"/> <line x1="390" y1="240" x2="570" y2="300"/>
+                  <line x1="390" y1="330" x2="570" y2="130"/> <line x1="390" y1="330" x2="570" y2="300"/>
+                </g>
+                <g class="node-input">
+                  <circle cx="100" cy="110" r="8" fill="url(#gradInput)" filter="url(#glow)"/>
+                  <circle cx="100" cy="190" r="8" fill="url(#gradInput)" filter="url(#glow)"/>
+                  <circle cx="100" cy="270" r="8" fill="url(#gradInput)" filter="url(#glow)"/>
+                  <circle cx="100" cy="350" r="8" fill="url(#gradInput)" filter="url(#glow)"/>
+                </g>
+                <g class="node-hidden">
+                  <circle cx="220" cy="70" r="9" fill="url(#gradHidden1)" filter="url(#glow)"/>
+                  <circle cx="220" cy="140" r="7" fill="url(#gradHidden1)" filter="url(#glowSoft)"/>
+                  <circle cx="220" cy="210" r="10" fill="url(#gradHidden1)" filter="url(#glow)"/>
+                  <circle cx="220" cy="290" r="7" fill="url(#gradHidden1)" filter="url(#glowSoft)"/>
+                  <circle cx="220" cy="360" r="8" fill="url(#gradHidden1)" filter="url(#glow)"/>
+                </g>
+                <g class="node-hidden">
+                  <circle cx="380" cy="60" r="8" fill="url(#gradHidden2)" filter="url(#glow)"/>
+                  <circle cx="380" cy="150" r="10" fill="url(#gradHidden2)" filter="url(#glow)"/>
+                  <circle cx="380" cy="240" r="7" fill="url(#gradHidden2)" filter="url(#glowSoft)"/>
+                  <circle cx="380" cy="330" r="9" fill="url(#gradHidden2)" filter="url(#glow)"/>
+                </g>
+                <g class="node-output">
+                  <circle cx="580" cy="130" r="12" fill="url(#gradOutput)" filter="url(#glowIntense)"/>
+                  <circle cx="580" cy="300" r="12" fill="url(#gradOutput)" filter="url(#glowIntense)"/>
+                </g>
+                <g class="node-input">
+                  <circle cx="100" cy="110" r="14" fill="none" stroke="url(#gradInput)" stroke-width="1" opacity="0.3" filter="url(#glowSoft)"/>
+                  <circle cx="100" cy="190" r="14" fill="none" stroke="url(#gradInput)" stroke-width="1" opacity="0.3" filter="url(#glowSoft)"/>
+                  <circle cx="100" cy="270" r="14" fill="none" stroke="url(#gradInput)" stroke-width="1" opacity="0.3" filter="url(#glowSoft)"/>
+                  <circle cx="100" cy="350" r="14" fill="none" stroke="url(#gradInput)" stroke-width="1" opacity="0.3" filter="url(#glowSoft)"/>
+                </g>
+                <g stroke="url(#conn1)" stroke-width="1.2" fill="none" class="conn-flow" opacity="0.5">
+                  <line x1="100" y1="190" x2="220" y2="210"/>
+                  <line x1="220" y1="210" x2="380" y2="150"/>
+                  <line x1="380" y1="150" x2="580" y2="130"/>
+                </g>
+                <radialGradient id="bgGlowLeft" cx="20%" cy="50%" r="40%">
+                  <stop offset="0%" stop-color="#3B82C4" stop-opacity="0.06"/>
+                  <stop offset="100%" stop-color="var(--dark)" stop-opacity="0"/>
+                </radialGradient>
+                <radialGradient id="bgGlowRight" cx="80%" cy="50%" r="30%">
+                  <stop offset="0%" stop-color="#F97316" stop-opacity="0.05"/>
+                  <stop offset="100%" stop-color="var(--dark)" stop-opacity="0"/>
+                </radialGradient>
+                <rect width="800" height="450" fill="url(#bgGlowLeft)"/>
+                <rect width="800" height="450" fill="url(#bgGlowRight)"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Clients -->
+      <section class="clients" aria-label="Clientes">
+        <p class="clients-label">Confían en nosotros</p>
+        <div class="clients-list">
+          <span class="client-item"><img src="assets/img/clients/unla.png" alt="Universidad Nacional de Lanús" loading="lazy"></span>
+          <span class="client-item"><img src="assets/img/clients/b2b.webp" alt="B2BLatam" loading="lazy"></span>
+          <span class="client-item"><img src="assets/img/clients/ua.png" alt="Universidad de Alicante" loading="lazy"></span>
+        </div>
+      </section>
+
+      <!-- Solutions -->
+      <section class="section" id="soluciones" aria-labelledby="solutions-title">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-title">Soluciones</p>
+            <h2 class="section-heading" id="solutions-title">Soluciones Tecnológicas</h2>
+            <p class="section-sub">Arquitecturas diseñadas para resolver desafíos reales de educación, comercio y desarrollo de software.</p>
+          </div>
+        </div>
+        <div class="solutions-grid">
+          <article class="solution-card">
+            <div class="solution-card-header">
+              <div class="solution-icon" style="background:rgba(27,58,92,0.1);color:var(--dark);">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              </div>
+              <span class="solution-tag" style="background:var(--dark);color:var(--white);">Sector Académico</span>
+            </div>
+            <h3>CogniBookIA</h3>
+            <p class="section-sub">Chatbot con arquitectura RAG alimentado por la bibliografía oficial de cada cátedra. Precisión académica garantizada.</p>
+          </article>
+
+          <article class="solution-card">
+            <div class="solution-card-header">
+              <div class="solution-icon" style="background:rgba(74,155,94,0.12);color:var(--green);">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M6 6h.01M6 10h.01M6 14h.01M6 18h.01"/></svg>
+              </div>
+              <span class="solution-tag" style="background:var(--green);color:var(--white);">Sector Comercial</span>
+            </div>
+            <h3>PyME-Assist</h3>
+            <p class="section-sub">Automatización de atención al cliente vía WhatsApp Business API con módulo transaccional y RAG para FAQ.</p>
+          </article>
+
+          <article class="solution-card">
+            <div class="solution-card-header">
+              <div class="solution-icon" style="background:rgba(59,130,196,0.12);color:var(--light);">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <span class="solution-tag" style="background:var(--light);color:var(--white);">Software Factories</span>
+            </div>
+            <h3>Ingeniería Aumentada</h3>
+            <p class="section-sub">Capacitación in-company para transformar desarrolladores en orquestadores de agentes autónomos.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Methodology -->
+      <section class="section methodology-section" id="metodologia" aria-labelledby="method-title">
+        <div class="container">
+          <div class="section-header center">
+            <p class="section-title">Metodología</p>
+            <h2 class="section-heading" id="method-title">Cómo trabajamos</h2>
+            <p class="section-sub" style="margin-left:auto;margin-right:auto;">Un proceso iterativo, ágil y centrado en resultados que garantiza la entrega de valor en cada etapa.</p>
+          </div>
+        </div>
+        <div class="container methodology-container">
+          <div class="timeline-track" aria-hidden="true"></div>
+          <div class="methodology-grid">
+            <div class="method-step">
+              <div class="method-step-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              </div>
+              <span class="method-step-label">PASO 01</span>
+              <h3>Diagnóstico</h3>
+              <p>Analizamos tu situación actual, identificamos oportunidades y definimos KPIs de éxito.</p>
+            </div>
+            <div class="method-step">
+              <div class="method-step-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              </div>
+              <span class="method-step-label">PASO 02</span>
+              <h3>Estrategia</h3>
+              <p>Diseñamos una hoja de ruta personalizada alineada a tus objetivos de negocio.</p>
+            </div>
+            <div class="method-step">
+              <div class="method-step-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <span class="method-step-label">PASO 03</span>
+              <h3>Implementación</h3>
+              <p>Ejecutamos con equipos multidisciplinarios, metodologías ágiles y entregas iterativas.</p>
+            </div>
+            <div class="method-step">
+              <div class="method-step-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+              </div>
+              <span class="method-step-label">PASO 04</span>
+              <h3>Optimización</h3>
+              <p>Medimos, aprendemos y escalamos. Mejora continua basada en datos reales.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Metrics -->
+      <section class="section bg-dark" aria-labelledby="metrics-title">
+        <div class="container">
+          <div class="metrics-header">
+            <p class="section-title" style="color:rgba(59,130,196,0.6);">Áreas de impacto</p>
+            <h2 class="section-heading" id="metrics-title" style="color:#fff;">Cómo generamos valor</h2>
+          </div>
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <div class="metric-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4A9B5E" stroke-width="1.5" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <p class="metric-label">Soluciones Implementadas</p>
+              <p class="metric-desc">Arquitecturas RAG, automatización comercial y capacitación en IA entregadas a organizaciones de educación y comercio.</p>
+            </div>
+            <div class="metric-card">
+              <div class="metric-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4A9B5E" stroke-width="1.5" stroke-linecap="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <p class="metric-label">Automatización con IA</p>
+              <p class="metric-desc">Orquestación de agentes autónomos y procesamiento de lenguaje natural para optimizar procesos complejos.</p>
+            </div>
+            <div class="metric-card">
+              <div class="metric-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4A9B5E" stroke-width="1.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <p class="metric-label">Capacitación Empresarial</p>
+              <p class="metric-desc">Programas intensivos diseñados para que cada hora invertida se traduzca en minutos ahorrados en el día a día.</p>
+            </div>
+            <div class="metric-card">
+              <div class="metric-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4A9B5E" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+              <p class="metric-label">Consultoría Tecnológica</p>
+              <p class="metric-desc">Acompañamiento estratégico para que la adopción de IA sea sostenible y potencie el impacto del negocio.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tech Stack -->
+      <section class="section" aria-labelledby="tech-title">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-title">Tecnología</p>
+            <h2 class="section-heading" id="tech-title">Nuestro stack tecnológico</h2>
+            <p class="section-sub">Herramientas modernas y escalables para cada desafío.</p>
+          </div>
+          <div class="tech-grid">
+            <div class="tech-item"><img src="assets/img/tech/python.svg" alt="" width="20" height="20"><span>Python</span></div>
+            <div class="tech-item"><img src="assets/img/tech/fastapi.svg" alt="" width="20" height="20"><span>FastAPI</span></div>
+            <div class="tech-item"><img src="assets/img/tech/nodedotjs.svg" alt="" width="20" height="20"><span>Node.js</span></div>
+            <div class="tech-item"><img src="assets/img/tech/typescript.svg" alt="" width="20" height="20"><span>TypeScript</span></div>
+            <div class="tech-item"><img src="assets/img/tech/express.svg" alt="" width="20" height="20"><span>Express 5</span></div>
+            <div class="tech-item"><img src="assets/img/tech/postgresql.svg" alt="" width="20" height="20"><span>PostgreSQL 16</span></div>
+            <div class="tech-item"><img src="assets/img/tech/redis.svg" alt="" width="20" height="20"><span>Redis 7</span></div>
+            <div class="tech-item"><img src="assets/img/tech/chromadb.svg" alt="" width="20" height="20"><span>ChromaDB</span></div>
+            <div class="tech-item"><img src="assets/img/tech/prisma.svg" alt="" width="20" height="20"><span>Prisma 7</span></div>
+            <div class="tech-item"><img src="assets/img/tech/langchain.svg" alt="" width="20" height="20"><span>LangChain</span></div>
+            <div class="tech-item"><img src="assets/img/tech/langgraph.svg" alt="" width="20" height="20"><span>LangGraph</span></div>
+            <div class="tech-item"><img src="assets/img/tech/groq.svg" alt="" width="20" height="20"><span>Groq</span></div>
+            <div class="tech-item"><img src="assets/img/tech/huggingface.svg" alt="" width="20" height="20"><span>HuggingFace</span></div>
+            <div class="tech-item"><img src="assets/img/tech/pytorch.svg" alt="" width="20" height="20"><span>PyTorch</span></div>
+            <div class="tech-item"><img src="assets/img/tech/nextdotjs.svg" alt="" width="20" height="20"><span>Next.js 16</span></div>
+            <div class="tech-item"><img src="assets/img/tech/react.svg" alt="" width="20" height="20"><span>React 19</span></div>
+            <div class="tech-item"><img src="assets/img/tech/tailwindcss.svg" alt="" width="20" height="20"><span>Tailwind CSS 4</span></div>
+            <div class="tech-item"><img src="assets/img/tech/zustand.svg" alt="" width="20" height="20"><span>Zustand 5</span></div>
+            <div class="tech-item"><img src="assets/img/tech/docker.svg" alt="" width="20" height="20"><span>Docker</span></div>
+            <div class="tech-item"><img src="assets/img/tech/nginx.svg" alt="" width="20" height="20"><span>nginx</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Awards -->
+      <section class="section bg-gray" aria-labelledby="awards-title">
+        <div class="container">
+          <div class="section-header center">
+            <p class="section-title">Reconocimientos</p>
+            <h2 class="section-heading" id="awards-title">Premios y certificaciones</h2>
+          </div>
+          <div class="award-card">
+            <span class="section-sub">Reconocimiento Internacional</span>
+            <h3 class="section-sub">CognibookIA presentado en España</h3>
+            <p class="section-sub">Nuestro proyecto CognibookIA, una plataforma de IA soberana para la educación universitaria basada en RAG, fue presentado en el Congreso Internacional de Educación y Conocimiento de la Universidad de Alicante.</p>
+            <a href="https://www.linkedin.com/posts/gustavo-hernan-siciliano_educaciaejn-cooperaciaejn-unla-activity-7470925528321904640-ztin" target="_blank" rel="noopener noreferrer" class="btn-primary btn-blue">
+              Ver publicación en LinkedIn
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Casos de Éxito -->
+      <section class="section" id="casos-de-exito" aria-labelledby="casos-title">
+        <div class="container">
+          <div class="section-header center">
+            <p class="section-title">Casos de Éxito</p>
+            <h2 class="section-heading" id="casos-title">Resultados que transforman</h2>
+            <p class="section-sub" style="margin-left:auto;margin-right:auto;">Historias reales de organizaciones que potenciaron su negocio con datos e inteligencia artificial.</p>
+          </div>
+          <div class="casos-grid">
+            <article class="caso-card">
+              <div class="caso-tags">
+                <span class="caso-tag" style="background:rgba(74,155,94,0.12);color:var(--green);border:1px solid rgba(74,155,94,0.25);">Capacitación</span>
+                <span class="caso-tag" style="background:rgba(59,130,196,0.12);color:var(--light);border:1px solid rgba(59,130,196,0.25);">IA Aplicada</span>
+              </div>
+              <h3>De la teoría a la automatización real</h3>
+              <p class="caso-client"><strong>B2BLatam</strong></p>
+              <div class="caso-body-short">
                 <ul>
-                    <li><a href="#nosotros">La Firma</a></li>
-                    <li><a href="#soluciones">Soluciones IA</a></li>
-                    <li><a href="#capacitacion">Capacitación</a></li>
-                    <li><a href="#contacto" class="btn-primary">Agendar Reunión</a></li>
+                  <li>Programa intensivo de capacitación en IA con enfoque práctico</li>
+                  <li>Prompting estratégico, Microsoft Copilot y herramientas 2026</li>
+                  <li>Participantes detectaron oportunidades de automatización en tiempo real</li>
                 </ul>
-            </nav>
-        </div>
-    </header>
+              </div>
+              <div class="caso-body-full">
+                <p>Junto al equipo de B2BLatam, finalizamos un programa intensivo de capacitación en IA diseñado con un único norte: que cada hora invertida se traduzca en minutos ahorrados en el día a día.</p>
+                <p>Durante tres encuentros prácticos, fuimos mucho más allá de los conceptos teóricos. Nos metimos de lleno en <strong>prompting estratégico y fundamentos sólidos</strong>, el ecosistema de herramientas clave para este 2026 y <strong>Microsoft Copilot</strong> aplicado a escenarios reales de negocio.</p>
+                <p>Lo más valioso fue ver a los participantes detectar, en tiempo real, oportunidades concretas para optimizar procesos complejos y automatizar tareas repetitivas. El éxito de una capacitación no se mide en horas dictadas, sino en los cambios que el equipo implementa desde el día uno.</p>
+                <p>Un agradecimiento enorme a <strong>Florencia Bernini</strong> y <strong>Daniel Segovia</strong> por confiar en nosotros para este proceso, y a todo el equipo de B2BLatam por la energía y el nivel de participación.</p>
+              </div>
+              <button class="caso-toggle">Ver más</button>
+            </article>
 
-    <section class="hero">
+            <article class="caso-card">
+              <div class="caso-tags">
+                <span class="caso-tag" style="background:rgba(27,58,92,0.1);color:var(--dark);border:1px solid rgba(27,58,92,0.2);">Educación</span>
+                <span class="caso-tag" style="background:rgba(59,130,196,0.12);color:var(--light);border:1px solid rgba(59,130,196,0.25);">RAG</span>
+                <span class="caso-tag" style="background:rgba(74,155,94,0.12);color:var(--green);border:1px solid rgba(74,155,94,0.25);">IA Soberana</span>
+              </div>
+              <h3>IA soberana para la educación universitaria</h3>
+              <p class="caso-client"><strong>UNLa — Universidad Nacional de Lanús</strong></p>
+              <div class="caso-body-short">
+                <ul>
+                  <li>Proyecto con RAG AI para plataforma educativa universitaria</li>
+                  <li>Presentado en el Congreso Internacional de Educación y Conocimiento (Alicante, España)</li>
+                  <li>Cooperación con universidades de España, México, Uruguay, Italia y Costa Rica</li>
+                </ul>
+              </div>
+              <div class="caso-body-full">
+                <p>La UNLa estuvo presente en el <strong>Congreso Internacional de Educación y Conocimiento</strong> en la Universidad de Alicante, España, presentando un proyecto de investigación y desarrollo que utiliza <strong>RAG AI</strong> para generar una plataforma educativa de IA soberana.</p>
+                <p>El proyecto se llama <strong>Cognibookia</strong> y ya está en etapa de testeo en ambiente real. Este desarrollo se confeccionó en el marco de Sicilia Labs Tech con el apoyo del Departamento de Desarrollo Productivo y Tecnológico en UNLa.</p>
+                <p>Confiamos en que la cooperación en la investigación y desarrollo por parte de docentes, estudiantes y universidades es fundamental para el crecimiento y generación de conocimiento.</p>
+              </div>
+              <button class="caso-toggle">Ver más</button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team -->
+      <section class="section bg-gray" aria-labelledby="team-title">
         <div class="container">
-            <h1>Ingeniería y Arquitectura en Inteligencia Artificial</h1>
-            <p>Democratizamos el acceso a la IA aplicada mediante herramientas de automatización precisas. Transformamos la educación, el comercio y el desarrollo de software con orquestación de agentes autónomos.</p>
-            <a href="#soluciones" class="btn-secondary">Explorar Arquitecturas</a>
+          <div class="section-header">
+            <p class="section-title">Equipo</p>
+            <h2 class="section-heading" id="team-title">Conoce a los fundadores</h2>
+            <p class="section-sub">Profesionales apasionados por la tecnología y los resultados.</p>
+          </div>
+          <div class="team-grid">
+            <article class="team-card">
+              <div class="team-avatar" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <h3>Gustavo Siciliano</h3>
+              <p class="team-role">Fundador &amp; CEO</p>
+              <p class="team-bio">Ingeniero de software con 15+ años de experiencia liderando equipos de datos e IA en startups y corporaciones multinacionales. Apasionado por transformar organizaciones a través de la tecnología.</p>
+              <a href="mailto:gussiciliano@gmail.com" class="team-link">
+                <span>gussiciliano@gmail.com</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </article>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section id="nosotros" class="about">
-        <div class="container">
-            <h2>Nuestra Visión Estratégica</h2>
-            <div class="grid-2-cols">
-                <div class="card">
-                    <h3>Misión</h3>
-                    <p>Brindar herramientas de automatización precisas para la educación y el retail, operando simultáneamente como un semillero de talento para desarrolladores Junior de alto rendimiento.</p>
-                </div>
-                <div class="card">
-                    <h3>Visión</h3>
-                    <p>Consolidarnos como el partner tecnológico referente en Argentina para instituciones y PyMEs que buscan escalar operativamente sin comprometer la calidad humana y la precisión.</p>
-                </div>
-            </div>
+      <!-- Final CTA -->
+      <section class="final-cta" id="contacto" aria-labelledby="cta-title">
+        <div class="final-cta-inner">
+          <p>¿Listo para transformar tu negocio?</p>
+          <h2 id="cta-title">Hablemos de tu próximo proyecto</h2>
+          <div class="cta-actions">
+            <a href="mailto:gussiciliano@gmail.com" class="btn-primary">
+              Charlemos
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="empresa.html" class="btn-outline">
+              Conoce más
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section id="soluciones" class="products bg-light">
-        <div class="container">
-            <h2>Soluciones Tecnológicas</h2>
-            <div class="grid-3-cols">
-                
-                <div class="product-card">
-                    <div class="tag">Sector Académico</div>
-                    <h3>CogniBookIA</h3>
-                    <p><strong>El Desafío:</strong> Modelos fundacionales que generan alucinaciones o desvían la bibliografía oficial de la cátedra.</p>
-                    <p><strong>Nuestra Arquitectura:</strong> Despliegue de Chatbots con arquitectura RAG (Retrieval-Augmented Generation) aislada y alimentada exclusivamente por la base de datos oficial del docente. Precisión académica garantizada.</p>
-                </div>
+    </div>
+    <!-- ────── END HOME ────── -->
 
-                <div class="product-card">
-                    <div class="tag">Sector Comercial</div>
-                    <h3>PyME-Assist</h3>
-                    <p><strong>El Desafío:</strong> Cuellos de botella operativos en la atención vía WhatsApp que resultan en pérdida de conversiones.</p>
-                    <p><strong>Nuestra Arquitectura:</strong> Integración avanzada con WhatsApp Business API. Implementamos un módulo transaccional directo a base de datos, RAG para FAQ y análisis de enlaces sociales para asesoramiento automatizado.</p>
-                </div>
+  </main>
 
-                <div class="product-card">
-                    <div class="tag">Software Factories</div>
-                    <h3>Ingeniería Aumentada</h3>
-                    <p><strong>El Desafío:</strong> El mercado actual exige transicionar del desarrollo tradicional a la orquestación de IA.</p>
-                    <p><strong>Nuestra Arquitectura:</strong> Programas de capacitación in-company para transformar desarrolladores en orquestadores de agentes autónomos, eliminando el tiempo en tareas repetitivas (boilerplate, tests) para enfocarlo en la estrategia.</p>
-                </div>
-
-            </div>
+  <!-- Footer -->
+  <footer class="footer" aria-label="Pie de página">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-wrap">
+            <img src="assets/img/full-logo.png" alt="Sicilia Labs" width="180" height="55">
+          </div>
+          <p>Ingeniería y arquitectura en inteligencia artificial aplicada. Transformamos la educación, el comercio y el desarrollo de software con orquestación de agentes autónomos.</p>
+          <a href="mailto:gussiciliano@gmail.com" class="footer-email">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+            gussiciliano@gmail.com
+          </a>
         </div>
-    </section>
-
-    <footer id="contacto" class="footer">
-        <div class="container text-center">
-            <h2>Escale sus operaciones con Sicilia Labs</h2>
-            <p>Contáctenos para evaluar la viabilidad técnica de implementar IA en sus procesos.</p>
-            <a href="mailto:gussiciliano@gmail.com" class="btn-primary">gussiciliano@gmail.com</a>
-            <div class="social-links mt-4">
-                <a href="https://www.linkedin.com/in/gustavo-hernan-siciliano/">Conectemos en LinkedIn</a>
-            </div>
-            <p class="copyright mt-4">&copy; 2026 Sicilia Labs. Todos los derechos reservados.</p>
+        <div class="footer-col">
+          <p class="footer-col-title">Navegación</p>
+          <a href="empresa.html">Empresa</a>
+          <a href="#soluciones">Servicios</a>
+          <a href="#metodologia">Metodología</a>
+          <a href="#casos-de-exito">Casos de Éxito</a>
+          <a href="#contacto">Contacto</a>
         </div>
-    </footer>
+        <div class="footer-col">
+          <p class="footer-col-title">Contacto</p>
+          <a href="mailto:gussiciliano@gmail.com">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+            Correo
+          </a>
+          <a href="https://www.linkedin.com/in/gustavo-hernan-siciliano/" aria-label="LinkedIn de Sicilia Labs" target="_blank" rel="noopener noreferrer">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sicilia Labs. Todos los derechos reservados.</p>
+        <img src="assets/img/Logo del Polo IT trasparencia.avif" alt="Polo IT" height="30" class="footer-polo-logo">
+      </div>
+    </div>
+  </footer>
 
-    <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
