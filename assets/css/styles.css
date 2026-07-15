@@ -940,7 +940,12 @@ ul { list-style: none; }
   background: var(--dark);
   padding: 88px 24px 72px;
 }
-.empresa-hero-inner { max-width: 800px; margin: 0 auto; }
+.empresa-hero-inner {
+  max-width: 1200px;
+  width: min(100%, 1200px);
+  margin: 0 auto;
+  padding: 0 24px;
+}
 .empresa-back {
   background: none;
   border: none;
@@ -962,7 +967,8 @@ ul { list-style: none; }
   font-size: clamp(28px, 5vw, 48px);
   color: var(--white);
   line-height: 1.1;
-  margin: 0 0 24px;
+  margin: 0 0 20px;
+  max-width: 720px;
 }
 .empresa-hero p {
   font-family: var(--font-body);
@@ -970,6 +976,7 @@ ul { list-style: none; }
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.6);
   margin: 0;
+  max-width: 720px;
 }
 .mv-grid {
   display: grid;
