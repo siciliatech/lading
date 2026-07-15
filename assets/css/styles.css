@@ -706,7 +706,7 @@ ul { list-style: none; }
 /* Team */
 .team-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 28px;
   max-width: 760px;
 }
@@ -981,7 +981,20 @@ ul { list-style: none; }
 .mv-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 64px;
+  gap: 48px;
+}
+.mv-block {
+  background: rgba(27, 58, 92, 0.05);
+  border-left: 3px solid transparent;
+  border-radius: 4px;
+  padding: 32px 28px;
+}
+.mv-block.mission {
+  border-left-color: var(--light);
+}
+
+.mv-block.vision {
+  border-left-color: var(--green);
 }
 .mv-label {
   font-family: var(--font-heading);
@@ -1048,10 +1061,12 @@ ul { list-style: none; }
 .valores-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 32px;
+  gap: 24px;
 }
 .valor-item {
-  padding: 28px 0;
+  background: rgba(27,58,92,.05);
+  border-radius:4px;
+  padding:22px 20px;
 }
 .valor-item h3 {
   font-family: var(--font-heading);
