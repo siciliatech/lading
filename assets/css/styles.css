@@ -706,14 +706,16 @@ ul { list-style: none; }
 /* Team */
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 28px;
-  max-width: 760px;
 }
 .team-card {
   border: 1px solid var(--border);
   padding: 36px;
-}
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+} 
 .team-avatar {
   width: 68px;
   height: 68px;
@@ -755,6 +757,12 @@ ul { list-style: none; }
   font-size: 13px;
   color: var(--dark);
   transition: color 0.15s;
+  max-width: 100%;
+  margin-top: auto;
+}
+.team-link span {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 .team-link:hover { color: var(--light); }
 .team-placeholder {
@@ -1134,6 +1142,7 @@ ul { list-style: none; }
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
   .mv-grid { grid-template-columns: 1fr; gap: 40px; }
   .valores-grid { grid-template-columns: 1fr; }
+  .team-grid { max-width: 760px; }
 }
 @media (max-width: 640px) {
   .solutions-grid { grid-template-columns: 1fr; }
